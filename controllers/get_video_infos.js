@@ -26,7 +26,7 @@ module.exports = async (req, res) => {
 
         var label = sources[i].label;
         var urnEnc = new Buffer.from(sources[i].file).toString('base64');
-        var file = domain+'/ozlem?url='+urnEnc+'&cookie='+cookie;
+        var file = domain+'/videoplayback?url='+urnEnc+'&cookie='+cookie;
         
         result.push({ file, label, type: 'mp4' });
     }
